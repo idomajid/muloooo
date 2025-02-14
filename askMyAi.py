@@ -1,5 +1,3 @@
-#!/Users/idomajid/myAI/myvenv/bin/python
-
 import sys, requests, json, re, threading
 from time import sleep
 

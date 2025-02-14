@@ -1,3 +1,5 @@
+#!/Users/idomajid/myAI/myvenv/bin/python
+
 import sys, requests, json, re, threading
 from time import sleep
 
@@ -15,15 +17,14 @@ def loading_animation():
 def main():
     global stop_loading
 
+    if(len(sys.argv) < 2):
+        print('Usage: askMyAi "prompt" true/false')
+        print("true: apply thinking mode")
+        sys.exit(0)
+
     if(sys.argv[1] == "-v"):
         print("Version: deepseek-r1:1.5b")
         sys.exit(0)
-
-    if(len(sys.argv) < 2):
-        print("Usage: askMyAi <prompt> true/false")
-        print("true: apply thinking mode")
-
-        sys.exit(1)
     
     prompt = sys.argv[1]
 
